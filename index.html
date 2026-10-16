@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizizz do Milhão</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <div>
+        <p class="subtitulo">O DESAFIO COMEÇOU</p>
+        <h1>🏆 Quizizz do Milhão</h1>
+      </div>
+      <button id="musica" class="botao-musica">♫ Ligar música</button>
+    </header>
+
+    <section id="jogo">
+      <div class="painel-status">
+        <div>
+          <span class="rotulo">PERGUNTA</span>
+          <strong id="numero-pergunta">1/10</strong>
+        </div>
+        <div>
+          <span class="rotulo">PRÊMIO ACUMULADO</span>
+          <strong id="premio">R$ 0</strong>
+        </div>
+        <div>
+          <span class="rotulo">VIDAS</span>
+          <strong id="vidas">❤️ ❤️ ❤️</strong>
+        </div>
+      </div>
+
+      <div class="barra-fundo">
+        <div id="progresso"></div>
+      </div>
+
+      <section class="cartao-pergunta">
+        <p id="categoria">Conhecimentos gerais</p>
+        <h2 id="pergunta">Preparando pergunta...</h2>
+        <div id="alternativas" class="alternativas"></div>
+        <p id="mensagem" aria-live="polite"></p>
+      </section>
+
+      <section class="poderes">
+        <h3>⚡ Poderes especiais</h3>
+        <div class="linha-poderes">
+          <button id="dica" class="poder">
+            💡 Dica <span id="usos-dica">2 usos</span>
+          </button>
+          <button id="eliminar" class="poder">
+            ✂️ Eliminar opção <span id="usos-eliminar">2 usos</span>
+          </button>
+          <button id="dobrar" class="poder">
+            ✨ Prêmio 2× <span id="usos-dobrar">2 usos</span>
+          </button>
+        </div>
+        <p id="texto-dica" class="texto-dica"></p>
+      </section>
+
+      <div class="acoes">
+        <button id="parar" class="botao-parar">💰 Parar e levar metade</button>
+        <button id="proxima" class="botao-principal" disabled>
+          Próxima pergunta →
+        </button>
+      </div>
+
+      <p class="rodape">10 perguntas. 3 vidas. Será que você chega ao milhão?</p>
+    </section>
+
+    <section id="final" class="final escondido">
+      <div class="gorila" role="img" aria-label="Gorila fazendo gesto brincalhão">🦍🖕</div>
+      <p class="subtitulo">A SUA JORNADA TERMINOU</p>
+      <h2 id="titulo-final">Fim de jogo!</h2>
+      <p id="motivo-final"></p>
+
+      <div class="premio-final">
+        <span>Você vai levar</span>
+        <strong id="premio-final">R$ 0</strong>
+      </div>
+
+      <div class="pix">
+        <h3>Ò o te pix aqui 😂</h3>
+        <p>Coloque abaixo um link para gerar seu QR Code.</p>
+        <label for="link-pix">Link do Pix ou outro link:</label>
+        <input id="link-pix" type="url"
+          placeholder="https://..."
+          autocomplete="url">
+        <button id="gerar-qr" class="botao-principal">Gerar QR Code</button>
+        <div id="area-qr" class="area-qr escondido">
+          <img id="qr-code" alt="QR Code do link informado">
+          <a id="abrir-link" href="#" target="_blank" rel="noopener noreferrer">
+            Abrir link
+          </a>
+        </div>
+        <p class="aviso">Confira o endereço antes de abrir ou compartilhar.</p>
+      </div>
+
+      <button id="reiniciar" class="botao-principal">🔄 Jogar novamente</button>
+    </section>
+  </main>
+</body>
+</html>
